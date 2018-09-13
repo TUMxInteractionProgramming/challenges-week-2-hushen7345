@@ -40,6 +40,12 @@ h1 {
     color: white;
 }
 
+h1 img {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+
 /*Channels list*/
 ul {
     /* #2 #colorful #channelandchat */
@@ -92,15 +98,14 @@ ul li img {
 
 #my-message{
     margin-left: 17.5%;
-    margin-bottom: 8px;
-    padding-top: 16px;
-    padding-bottom: 16px;
 }
 
 .message-box {
     width: 80%;
     margin-left: 2.5%;
     margin-bottom: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .message-box h3 {/*metadata*/
