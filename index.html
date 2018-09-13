@@ -8,79 +8,10 @@
 
     <!-- We need to specify the character encoding, since we use chinese characters -->
     <meta charset="UTF-8">
-
+    
     <!-- #2 #css #elements -->
-    <style>
-
-        /* #2 #colorful #palette is:
-          * Background: #F5F5F5 (GREY 100)
-          * Primary Text: black
-
-          * Primary color: #3F51B5 (INDIGO)
-          * Primary color_text : white
-          * Accent color: #CDDC39 (LIME)
-          * Accent color_text: black
-          */
-
-        /*global styles */
-        * {
-            /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            /* #2 #colorful #background */
-            background-color: #F5F5F5;
-        }
-
-        h1 {
-            /* #2 #colourful #app-bar */
-            background-color: #3F51B5;
-            color: white;
-        }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: #CDDC39;
-            color: black;
-            /* #2 #font capital #letters */
-            text-transform: uppercase;
-        }
-
-
-        /*styles for channel area*/
-        ul {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        /*styles for chat area*/
-        p {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        strong {
-            /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
-            text-transform: uppercase;
-        }
-
-        h3 {
-            /* #2 #font #metadata is now medium */
-            font-size: medium;
-        }
-
-        em {
-            /* #2 #font #remaining overrides the default italic appearance of em elements*/
-            font-size: larger;
-            font-style: normal;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="./CSS/style.css"/>
 
 </head>
 
@@ -91,19 +22,34 @@
 <h1><img src="https://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus' Pic">chatter|app</h1>
 
 <!-- #1 #channels #topics -->
-<ul style="list-style-type: none">
+<ul>
     <li>#Yummy<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="Star Pic"></li>
-    <li>#SevenContinents<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="Star Pic-o"></li>
+    <li class="selected-channel">#SevenContinents<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="Star Pic-o"></li>
     <li>#KillerApp<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="Star Pic"></li>
     <li>#FirstPersonOnMars<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="Star-o Pic"></li>
     <li>#Octoberfest<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="Star Pic"></li>
 </ul>
 
 <!-- #1 #channels #buttons -->
-<div style="background-color: white">
-    <button>new<img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Lightbulb-o Pic"></button>
-    <button>trending<img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="Fire Pic"></button>
-    <button>favorites<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="Star Pic"></button>
+<div id="tab-bar">
+    <button class="tab-bar-button selected-button">
+        <div>
+            <img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Lightbulb-o Pic" class="tab-pic">
+        </div>
+        new
+    </button>
+    <button class="tab-bar-button">
+        <div>
+            <img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="Fire Pic" class="tab-pic">
+        </div>
+        trending
+    </button>
+    <button class="tab-bar-button">
+        <div>
+            <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="Star Pic" class="tab-pic">
+        </div>
+        favorites
+    </button>
 </div>
 
 
@@ -116,11 +62,11 @@
         <strong>cheeses.yard.applies</strong>
     </small>
 </h1>
-<div style="width: 80%">
+<div class="message-box" id="my-message">
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-        <strong><a href="https://map.what3words.com/cheeses.yard.applies" style="color: black" target="_blank">cheeses.yard.applies</a></strong>
+        <strong><a href="https://map.what3words.com/cheeses.yard.applies" class="w3w" target="_blank">cheeses.yard.applies</a></strong>
         Wed, June 20th, 13:37
         <!-- #1 #chat #ttl lives inside the metadata -->
         <em>15 min. left</em>
@@ -130,11 +76,11 @@
     <!-- #1 #chat #button subsequent to each message -->
     <button>+5 min.</button>
 </div>
-<div style="width: 80%">
+<div class="message-box">
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-        <strong><a href="https://map.what3words.com/truck.cotton.zone" style="color: black" target="_blank">truck.cotton.zone</a></strong>
+        <strong><a href="https://map.what3words.com/truck.cotton.zone" class="w3w" target="_blank">truck.cotton.zone</a></strong>
         Wed, June 20th, 13:39
         <!-- #1 #chat #ttl lives inside the metadata -->
         <em>4 min. left</em>
@@ -145,11 +91,11 @@
     <button>+5 min.</button>
 </div>
 
-<div style="width: 80%">
+<div class="message-box">
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-        <strong><a href="https://map.what3words.com/thus.best.dishes" style="color: black" target="_blank">thus.best.dishes</a></strong>
+        <strong><a href="https://map.what3words.com/thus.best.dishes" class="w3w" target="_blank">thus.best.dishes</a></strong>
         Wed, June 20th, 14:02
         <!-- #1 #chat #ttl lives inside the metadata -->
         <em>12 min. left</em>
@@ -160,11 +106,11 @@
     <button>+5 min.</button>
 </div>
 
-<div style="width: 80%">
+<div class="message-box">
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-        <strong><a href="https://map.what3words.com/driveway.helper.magazine" style="color: black" target="_blank">driveway.helper.magazine</a></strong>
+        <strong><a href="https://map.what3words.com/driveway.helper.magazine" class="w3w" target="_blank">driveway.helper.magazine</a></strong>
         Wed, June 20th, 14:02
         <!-- #1 #chat #ttl lives inside the metadata -->
         <em>7 min. left</em>
@@ -175,11 +121,11 @@
     <button>+5 min.</button>
 </div>
 
-<div style="width: 80%">
+<div class="message-box">
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-        <strong><a href="https://map.what3words.com/escapes.pitch.saucepan" style="color: black" target="_blank">escapes.pitch.saucepan</a></strong>
+        <strong><a href="https://map.what3words.com/escapes.pitch.saucepan" class="w3w" target="_blank">escapes.pitch.saucepan</a></strong>
         Wed, June 20th, 14:07
         <!-- #1 #chat #ttl lives inside the metadata -->
         <em>14 min. left</em>
@@ -190,11 +136,11 @@
     <button>+5 min.</button>
 </div>
 
-<div style="width: 80%">
+<div class="message-box">
     <!-- #1 #chat #metadata contains location, weekday, day, and time  -->
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-        <strong><a href="https://map.what3words.com/meanings.identity.pays" style="color: black" target="_blank">meanings.identity.pays</a></strong>
+        <strong><a href="https://map.what3words.com/meanings.identity.pays" class="w3w" target="_blank">meanings.identity.pays</a></strong>
         Wed, June 20th, 04:08
         <!-- #1 #chat #ttl lives inside the metadata -->
         <em>15 min. left</em>
